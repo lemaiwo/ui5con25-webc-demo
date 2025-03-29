@@ -1,0 +1,18 @@
+{
+  "generator-ui5-app": {
+    "namespace": "be.wl.webc.demo",
+    "framework": "OpenUI5",
+    "frameworkVersion": "1.134.0",
+    "author": "lemaiwo",
+    "initrepo": true,
+    "appId": "be.wl.webc.demo",
+    "appURI": "be/wl/webc/demo",
+    "cdnDomain": "sdk.openui5.org",
+    "defaultTheme": "sap_horizon",
+    "qunitCoverageFile": "qunit-coverage-istanbul.js",
+    "gte1_98_0": true,
+    "gte1_104_0": true,
+    "lt1_124_0": false,
+    "setupCompleted": true
+  }
+}
