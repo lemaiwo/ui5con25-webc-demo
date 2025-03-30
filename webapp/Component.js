@@ -1,4 +1,4 @@
-sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/Device", "./model/models"], function (UIComponent, Device, models) {
+sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/Device", "./model/models","@eliagroup-innersource/nova-components-native"], function (UIComponent, Device, models) {
 	"use strict";
 
 	return UIComponent.extend("be.wl.webc.demo.Component", {

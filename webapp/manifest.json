@@ -58,6 +58,16 @@
 				}
 			}
 		},
+		"resources": {
+			"css": [
+			  {
+				"uri": "style/style.css"
+			  },
+			  {
+				"uri": "style/nova-components.css"
+			  }
+			]
+		  },
 
 		"routing": {
 			"config": {
