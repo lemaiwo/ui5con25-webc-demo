@@ -1,0 +1,18 @@
+specVersion: "4.0"
+metadata:
+  name: be.wl.webc.demo
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: ui5-tooling-modules-task
+      afterTask: replaceVersion
+    - name: ui5-task-zipper
+      afterTask: generateCachebusterInfo
+      configuration:
+        archiveName: webcdemo
+        additionalFiles:
+          - xs-app.json
