@@ -2,3 +2,12 @@
 
 ** test **
 - add more controls
+
+
+Questions:
+- event handlers not working
+- binding not always behaving correct
+    - for list, it always needs to reset the full list => remove all and add all + new again
+    - field text value, not able to get binding
+
+- not possible to send json as a property, always detected as binding...

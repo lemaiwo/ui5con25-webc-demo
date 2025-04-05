@@ -43,7 +43,7 @@
 		"wdio-ui5-service": "^2.1.1"
 	},
 	"dependencies": {
-		"@eliagroup-innersource/nova-components-native": "^2.6.2",
-		"@eliagroup-innersource/nova-core": "^2.3.9"
+		"@nova-design-system/nova-base": "^3.0.0-beta.47",
+		"@nova-design-system/nova-webcomponents": "^3.0.0-beta.47"
 	}
 }

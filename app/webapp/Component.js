@@ -1,4 +1,4 @@
-sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/Device", "./model/models","@eliagroup-innersource/nova-components-native"], function (UIComponent, Device, models) {
+sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/Device", "./model/models","@nova-design-system/nova-webcomponents/loader"], function (UIComponent, Device, models,nova) {
 	"use strict";
 
 	return UIComponent.extend("be.wl.webc.demo.Component", {
@@ -7,6 +7,7 @@ sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/Device", "./model/models","@el
 			interfaces: ["sap.ui.core.IAsyncContentCreation"]
 		},
 		init: function () {
+			nova.defineCustomElements();
 			// call the base component's init function
 			UIComponent.prototype.init.call(this); // create the views based on the url/hash
 

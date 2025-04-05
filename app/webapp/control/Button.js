@@ -7,12 +7,10 @@ sap.ui.define([
 			tag: "nv-button",
 			properties: {
 				"color": {
-					type: "string",
-					mapping: "Color"
+					type: "string"
 				},
 				"cta":{
-					type:"boolean",
-					mapping:"Cta"
+					type:"boolean"
 				},
 				"value": {
 					type: "string",

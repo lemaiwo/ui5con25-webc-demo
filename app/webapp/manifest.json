@@ -64,7 +64,10 @@
 				"uri": "style/style.css"
 			  },
 			  {
-				"uri": "style/nova-components.css"
+				"uri": "style/nova-utils.css"
+			  },
+			  {
+				"uri": "style/spark.css"
 			  }
 			]
 		  },

@@ -7,20 +7,16 @@ sap.ui.define([
 			tag: "nv-alert",
 			properties: {
 				"close": {
-					type: "boolean",
-					mapping: "Close"
+					type: "boolean"
 				},
 				"icon":{
-					type:"string",
-					mapping:"Icon"
+					type:"string"
 				},
 				"visible":{
-					type:"boolean",
-					mapping:"Visible"
+					type:"boolean"
 				},
 				"permanent":{
-					type:"boolean",
-					mapping:"Permanent"
+					type:"boolean"
 				},
 				"text": {
 					type: "string",

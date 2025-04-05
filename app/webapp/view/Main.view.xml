@@ -13,13 +13,20 @@
 		title="{i18n>appTitle}"
 		id="page">
 		<content>
-			<elia:Alert permanent="true" visible="true" color="primary" text="Demo of Elia Group Web Components into UI5 for non-Fiori like applications!" ></elia:Alert>
+			<!-- <elia:Alert permanent="true" visible="false" color="primary" close="true" text="Demo of Elia Group Web Components into UI5 for non-Fiori like applications!" ></elia:Alert>
       		<elia:Badge text="Hello World 123" icon="sun" color="primary"/>
-			<elia:Button value="Hello World 123" cta="true" color="secondary" click="alert('xxx')"/>
 			<HBox >
 				<elia:Loader loading="true" size="xl" color="primary" ></elia:Loader>
 				<elia:Loader loading="true" size="xl" color="success" ></elia:Loader>
+			</HBox> -->
+			<HBox width="100%">
+				<elia:Fieldtext id="todo" valueChanged="onTodoChanged"/>
+				<elia:Button value="Add" cta="true" color="secondary" click="addTodo"/>
 			</HBox>
+			<!-- <VBox items="{/todos}">
+				<elia:Fieldcheckbox checked="{checked}" label="{description}" checkedChanged=".onCheckedChanged"/>
+			</VBox> -->
+			<elia:Table id="table" data-json="{/items}" ></elia:Table>
 		</content>
 	</Page>
 
