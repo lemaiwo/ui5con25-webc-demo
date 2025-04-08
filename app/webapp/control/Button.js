@@ -16,6 +16,14 @@ sap.ui.define([
 					type: "string",
 					mapping: "textContent"
 				}
+			},//leading-icon
+			defaultAggregation: "icon",
+			aggregations: {
+				icon: {
+					type: "sap.ui.core.Control",
+					multiple: false,
+					slot: "leading-icon"
+				}
 			},
 			events: {
 				"click": {}

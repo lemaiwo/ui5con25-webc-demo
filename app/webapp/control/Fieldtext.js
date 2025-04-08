@@ -10,6 +10,16 @@ sap.ui.define([
 					type: "string"
 				}
 			},
+			//after-input
+			
+			defaultAggregation: "after",
+			aggregations: {
+				after: {
+					type: "sap.ui.core.Control",
+					multiple: false,
+					slot: "after-input"
+				}
+			},
 			events: {
 				"valueChanged": {}
 			}

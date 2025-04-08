@@ -2,15 +2,15 @@ sap.ui.define([
 	"sap/ui/core/webc/WebComponent"
 ], function(WebComponent) {
 	"use strict";
-	return WebComponent.extend("com.myorg.myapp.control.loader", {
+	return WebComponent.extend("com.myorg.myapp.control.Icon", {
 		metadata: {
-			tag: "nv-loader",
+			tag: "nv-icon",
 			properties: {
 				"color": {
 					type: "string"
 				},
-				"loading":{
-					type:"boolean"
+				"name":{
+					type:"string"
 				},
 				"size": {
 					type: "string"
