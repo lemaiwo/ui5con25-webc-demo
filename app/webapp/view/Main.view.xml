@@ -36,7 +36,7 @@
 					<elia:Fieldcheckbox class="sapUiMediumMargin" checked="{checked}" label="{description}" description="{path:'createdOn', type: 'sap.ui.model.type.DateTime'}" checkedChanged=".onCheckedChanged"/>
 				</HBox>
 			</VBox>
-			<!-- <Table items="{path:'/todos', templateShareable: true}">
+			<Table items="{path:'/todos', templateShareable: true}">
 				<columns>
 					<Column >
 						<header>
@@ -67,7 +67,7 @@
 					<elia:Fieldcheckbox checked="{checked}" class="sapUiMediumMargin" label="{description}" checkedChanged=".onCheckedChanged"/>
 					<Button icon="sap-icon://delete" class="sapUiSmallMargin"/>
 				</CustomListItem>
-			</List> -->
+			</List>
 			<!-- 
 			<elia:Table id="table" data-json="{/items}" ></elia:Table> -->
 		</content>

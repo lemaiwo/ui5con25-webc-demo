@@ -1,8 +1,8 @@
 sap.ui.define([
-	"sap/ui/core/webc/WebComponent"
+	"./StencilComponent"
 ], function(WebComponent) {
 	"use strict";
-	return WebComponent.extend("com.myorg.myapp.control.Badge", {
+	return WebComponent.extend("be.wl.webc.demo.control.Badge", {
 		metadata: {
 			tag: "nv-badge",
 			properties: {

@@ -1,8 +1,8 @@
 sap.ui.define([
-	"sap/ui/core/webc/WebComponent"
+	"./StencilComponent"
 ], function(WebComponent) {
 	"use strict";
-	return WebComponent.extend("com.myorg.myapp.control.Fieldtext", {
+	return WebComponent.extend("be.wl.webc.demo.control.Fieldtext", {
 		metadata: {
 			tag: "nv-fieldtext",
 			properties: {

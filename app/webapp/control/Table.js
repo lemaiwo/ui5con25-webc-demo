@@ -1,8 +1,8 @@
 sap.ui.define([
-	"sap/ui/core/webc/WebComponent"
+	"./StencilComponent"
 ], function(WebComponent) {
 	"use strict";
-	return WebComponent.extend("com.myorg.myapp.control.table", {
+	return WebComponent.extend("be.wl.webc.demo.control.table", {
 		metadata: {
 			tag: "nv-table",
 			properties: {

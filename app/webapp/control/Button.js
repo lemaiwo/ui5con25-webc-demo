@@ -1,8 +1,8 @@
 sap.ui.define([
-	"sap/ui/core/webc/WebComponent"
+	"./StencilComponent"
 ], function(WebComponent) {
 	"use strict";
-	return WebComponent.extend("com.myorg.myapp.control.Button", {
+	return WebComponent.extend("be.wl.webc.demo.control.Button", {
 		metadata: {
 			tag: "nv-button",
 			properties: {

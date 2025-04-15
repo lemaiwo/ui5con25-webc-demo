@@ -1,8 +1,8 @@
 sap.ui.define([
-	"sap/ui/core/webc/WebComponent"
+	"./StencilComponent"
 ], function(WebComponent) {
 	"use strict";
-	return WebComponent.extend("com.myorg.myapp.control.fieldcheckbox", {
+	return WebComponent.extend("be.wl.webc.demo.control.fieldcheckbox", {
 		metadata: {
 			tag: "nv-fieldcheckbox",
 			properties: {
@@ -17,7 +17,7 @@ sap.ui.define([
 				}
 			},
 			events: {
-				"checkedChanged": {parameters: {
+				"checked-changed": {parameters: {
 					state: {
 						type: "boolean"
 					}
