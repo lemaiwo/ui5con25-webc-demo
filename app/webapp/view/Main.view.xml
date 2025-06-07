@@ -20,54 +20,55 @@
 				<elia:Loader loading="true" size="xl" color="success" ></elia:Loader>
 			</HBox> -->
 			<!-- <HBox width="100%"> -->
-				<elia:Fieldtext id="todo" valueChanged="onTodoChanged">
+				<elia:Fieldtext id="todo" value="{/todo}" valueChanged="onTodoChanged">
 					<elia:after>
 						<elia:Button value="Add" cta="true" color="secondary" click="addTodo"/>
 					</elia:after>
 				</elia:Fieldtext>
 			<!-- </HBox> -->
-			<VBox items="{/todos}">
+			<!-- <VBox items="{/todos}">
 				<HBox>
-					<elia:Button value="Delete" cta="true" color="secondary" class="sapUiMediumMargin" click="deleteTodo">
-						<elia:icon>
+					<elia:Button value="Delete" cta="true" color="secondary" class="sapUiMediumMargin" click="deleteTodo"> -->
+						<!-- <elia:icon>
 							<elia:Icon name="delete" size="medium"/>
-						</elia:icon>							
-					</elia:Button>
+						</elia:icon>							 -->
+					<!-- </elia:Button>
 					<elia:Fieldcheckbox class="sapUiMediumMargin" checked="{checked}" label="{description}" description="{path:'createdOn', type: 'sap.ui.model.type.DateTime'}" checkedChanged=".onCheckedChanged"/>
 				</HBox>
-			</VBox>
-			<Table items="{path:'/todos', templateShareable: true}">
-				<columns>
-					<Column >
-						<header>
-							<Text text="Todo" />
-						</header>
-					</Column>
-
-					<Column width="150px">
-						<header>
-							<Text text="Delete" />
-						</header>
-					</Column>
-					
-				</columns>
-				<ColumnListItem>
-					<cells>
-						<elia:Fieldcheckbox checked="{checked}" class="sapUiMediumMargin" label="{description}" checkedChanged=".onCheckedChanged"/>
-						<elia:Button value="Delete" cta="true" color="secondary" click="deleteTodo">
-							<elia:icon>
-								<elia:Icon name="delete" size="medium"/>
-							</elia:icon>							
-						</elia:Button>
-					</cells>
-				</ColumnListItem>
-			</Table>
-			<List items="{/todos}">
+			</VBox> -->
+			<Select id="filterSelect" change="onFilterChanged" class="sapUiSmallMarginBottom">
+    <items>
+        <core:Item key="all" text="All" />
+        <core:Item key="checked" text="Checked" />
+        <core:Item key="unchecked" text="Unchecked" />
+    </items>
+</Select>
+<Table id="todosTable" items="{path:'/todos', templateShareable: true}">
+    <columns>
+        <Column>
+            <header>
+                <Text text="Todo" />
+            </header>
+        </Column>
+        <Column width="150px">
+            <header>
+                <Text text="Delete" />
+            </header>
+        </Column>
+    </columns>
+    <ColumnListItem>
+        <cells>
+            <elia:Fieldcheckbox checked="{checked}" class="sapUiMediumMargin" label="{description}" changed=".statusChanged"/>
+            <elia:Button value="Delete" cta="true" color="secondary" click="deleteTodo"/>
+        </cells>
+    </ColumnListItem>
+</Table>
+			<!-- <List items="{/todos}">
 				<CustomListItem >
 					<elia:Fieldcheckbox checked="{checked}" class="sapUiMediumMargin" label="{description}" checkedChanged=".onCheckedChanged"/>
 					<Button icon="sap-icon://delete" class="sapUiSmallMargin"/>
 				</CustomListItem>
-			</List>
+			</List> -->
 			<!-- 
 			<elia:Table id="table" data-json="{/items}" ></elia:Table> -->
 		</content>

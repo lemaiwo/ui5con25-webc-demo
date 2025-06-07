@@ -7,7 +7,7 @@ sap.ui.define([
 			tag: "nv-fieldcheckbox",
 			properties: {
 				"checked": {
-					type: "string"
+					type: "boolean"
 				},
 				"label": {
 					type: "string"
@@ -17,12 +17,20 @@ sap.ui.define([
 				}
 			},
 			events: {
-				"checked-changed": {parameters: {
+				"changed": {parameters: {
 					state: {
 						type: "boolean"
 					}
 				}}
 			}
-		}
+		},
+		init: function() {
+			WebComponent.prototype.init.apply(this, arguments);
+			this.attachBrowserEvent("checkedChanged", (oEvent) => {
+				console.log("checkedChanged event", oEvent);
+				this.setProperty("checked", oEvent.detail, true);
+				this.fireEvent("changed", { state: oEvent.detail });
+			});
+		},
 	});
 });

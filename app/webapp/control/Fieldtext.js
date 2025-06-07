@@ -23,6 +23,14 @@ sap.ui.define([
 			events: {
 				"valueChanged": {}
 			}
-		}
+		},
+
+		init: function() {
+			WebComponent.prototype.init.apply(this, arguments);
+			this.attachBrowserEvent("valueChanged", (oEvent) => {
+				console.log("valueChanged event", oEvent);
+				this.setProperty("value", oEvent.detail, true);
+			});
+		},
 	});
 });

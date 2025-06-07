@@ -1,5 +1,17 @@
-sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/Device", "./model/models","@nova-design-system/nova-webcomponents/loader"], function (UIComponent, Device, models,nova) {
+sap.ui.define([
+	"sap/ui/core/UIComponent", 
+	"sap/ui/Device", 
+	"./model/models",
+	"sap/ui/dom/includeStylesheet",
+	"@nova-design-system/nova-webcomponents/loader"], 
+	function (UIComponent, Device, models,includeStylesheet,novaLoader) {
 	"use strict";
+
+	includeStylesheet(sap.ui.require.toUrl("@nova-design-system/nova-base/dist/css/nova-utils.css"));
+	includeStylesheet(sap.ui.require.toUrl("@nova-design-system/nova-base/dist/css/spark.css")); // or ocean.css
+
+	const { defineCustomElements } = novaLoader;
+	defineCustomElements();
 
 	return UIComponent.extend("be.wl.webc.demo.Component", {
 		metadata: {
@@ -7,7 +19,6 @@ sap.ui.define(["sap/ui/core/UIComponent", "sap/ui/Device", "./model/models","@no
 			interfaces: ["sap.ui.core.IAsyncContentCreation"]
 		},
 		init: function () {
-			nova.defineCustomElements();
 			// call the base component's init function
 			UIComponent.prototype.init.call(this); // create the views based on the url/hash
 
