@@ -11,6 +11,7 @@
 
 	<Page
 		title="{i18n>appTitle}"
+		showHeader="false"
 		id="page">
 		<content>
 			<!-- <elia:Alert permanent="true" visible="false" color="primary" close="true" text="Demo of Elia Group Web Components into UI5 for non-Fiori like applications!" ></elia:Alert>
