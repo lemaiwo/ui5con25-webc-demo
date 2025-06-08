@@ -17,11 +17,13 @@ sap.ui.define([
 				}
 			},
 			events: {
-				"changed": {parameters: {
-					state: {
-						type: "boolean"
+				"changed": {
+					parameters: {
+						state: {
+							type: "boolean"
+						}
 					}
-				}}
+				}
 			}
 		},
 		init: function() {

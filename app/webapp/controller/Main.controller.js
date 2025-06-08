@@ -58,7 +58,8 @@ sap.ui.define([
 		onFilterChanged: function(oEvent) {
 			this.triggerReRenderTable();
 
-			const sKey = oEvent.getSource().getSelectedKey();
+			// const sKey = oEvent.getSource().getSelectedKey();
+			const sKey = oEvent.getParameter("value");
 			const oTable = this.byId("todosTable");
 			const oBinding = oTable.getBinding("items");
 			const filters = [];
